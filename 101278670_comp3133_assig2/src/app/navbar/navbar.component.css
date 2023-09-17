@@ -1,0 +1,21 @@
+.navbar {
+  height: 75px;
+  background: #4B0082;
+  flex: auto;
+  justify-content: space-between;
+  color: white;
+  font-size: 20px;
+  margin-bottom:20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size:20px;
+    padding:20px;
+}
+
+  a:hover {
+    color: #ffc800;
+    transition: ease 0.5s;
+  }

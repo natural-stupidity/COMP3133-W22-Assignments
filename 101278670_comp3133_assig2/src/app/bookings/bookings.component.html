@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<div class="bookingsContainer">
+  <h1>My Bookings</h1>
+  <div>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let booking of bookings; let i = index">
+        <div class="card text-white border-warning">
+          <h5 class="card-header">Booking ID: {{booking.booking_id}}</h5>
+          <div class="card-body">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Listing ID:</td>
+                  <td>{{booking.listing_id}}</td>
+                </tr>
+                <tr>
+                  <td>Date Booked:</td>
+                  <td>{{booking.booking_date}}</td>
+                </tr>
+                <tr>
+                  <td>Booking Start:</td>
+                  <td>{{booking.booking_start}}</td>
+                </tr>
+                <tr>
+                  <td>Booking End:</td>
+                  <td>{{booking.booking_end}}</td>
+                </tr>
+                <tr>
+                  <td>Booked By:</td>
+                  <td>{{booking.username}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

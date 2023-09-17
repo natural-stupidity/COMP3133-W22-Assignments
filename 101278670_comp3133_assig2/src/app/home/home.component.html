@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<div class="listingsContainer">
+  <h1>Listings</h1>
+
+  <div class="search-container">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Filter by Name, City, or Postal Code" [(ngModel)]="search" (ngModelChange)="searchEvent()">
+    </div>
+  </div>
+  <hr/>
+  <div>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let listing of filteredListings; let i = index">
+        <div class="card text-white border-warning">
+          <h5 class="card-header">{{listing.listing_title}}</h5>
+          <div class="card-body">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>ID: </td>
+                  <td>{{listing.id}}</td>
+                </tr>
+                <tr>
+                  <td>Listing ID:</td>
+                  <td>{{listing.listing_id}}</td>
+                </tr>
+                <tr>
+                  <td>Description:</td>
+                  <td>{{listing.description}}</td>
+                </tr>
+                <tr>
+                  <td>Street:</td>
+                  <td>{{listing.street}}</td>
+                </tr>
+                <tr>
+                  <td>City:</td>
+                  <td>{{listing.city}}</td>
+                </tr>
+                <tr>
+                  <td>Postal Code:</td>
+                  <td>{{listing.postal_code}}</td>
+                </tr>
+                <tr>
+                  <td>Price:</td>
+                  <td>${{listing.price}}</td>
+                </tr>
+                <tr>
+                  <td>Email:</td>
+                  <td>{{listing.email}}</td>
+                </tr>
+                <tr>
+                  <td>Listed By:</td>
+                  <td>{{listing.username}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn btn-warning" *ngIf="type" [routerLink]="['/book', listing.listing_id]">Book Now!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

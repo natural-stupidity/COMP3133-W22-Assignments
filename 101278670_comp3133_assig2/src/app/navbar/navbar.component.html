@@ -1,0 +1,15 @@
+<div class="navbar">
+  <div>
+    <a [routerLink]="['/']"><span>COMP3133 Assignment 2</span></a>
+  </div>
+  <div>
+    <span style="position:absolute; bottom:20px;" *ngIf="username">Welcome, {{ username }}</span>
+  </div>
+  <div>
+    <a *ngIf="!isLoggedIn" [routerLink]="['/login']">Login</a>
+    <a *ngIf="!isLoggedIn" [routerLink]="['/signup']">Register</a>
+    <a *ngIf="isAdmin" [routerLink]="['/admin']">Add a Listing</a>
+    <a *ngIf="isLoggedIn" [routerLink]="['/my_bookings']">My Bookings</a>
+    <a *ngIf="isLoggedIn" [routerLink]="['/']" (click)="logout()">Logout</a>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.bookingsContainer {
+  padding: 30px;
+  text-align: center;
+}
+
+.card {
+  background: #4B0082;
+}
+
+.card-header {
+  background-color: rgba(0,0,0,0.2)
+}
+
+.card-body {
+  font-size: 18px;
+  text-align: center;
+}
+
+.table {
+  color: white;
+  text-align: left;
+}
+
+td:first-child {
+  font-weight: bold
+}

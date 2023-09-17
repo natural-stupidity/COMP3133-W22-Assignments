@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<div class="formContainer">
+  <form id="login" class="larForms" [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <div class="text-center formInlay">
+      <div style="display:flex; width: 100%; flex-direction:column">
+        <h2 class="formTitle">Create Booking for Listing ID: {{ listing_id }}</h2>
+      </div>
+      <div style="width:100%; text-align:left; margin-bottom:20px;">
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Booking ID</h5>
+          <input style="width:100%;" class="form-control" type="text" value="" formControlName="booking_id" required>
+        </div>
+        <div>
+          <h5 class="formLabel">Booking Start</h5>
+          <input style="width: 100%; margin-bottom: 20px;" class="form-control" type="date" value="" formControlName="booking_start" required>
+        </div>
+        <div>
+          <h5 class="formLabel">Booking End</h5>
+          <input style="width: 100%; margin-bottom: 20px;" class="form-control" type="date" value="" formControlName="booking_end" required>
+        </div>
+        <div style="margin:auto;">
+          <button type="submit" class="btn btn-warning" style="width:100%; margin-bottom:20px; font-size:20px">Create Booking</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="formContainer">
+  <form id="login" class="larForms" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="text-center formInlay">
+      <div style="display:flex; width: 100%; flex-direction:column">
+        <h2 class="formTitle">Login</h2>
+        <div class="formSubtitle">Please login to use the app.</div>
+      </div>
+      <div style="width:100%; text-align:left; margin-bottom:20px;">
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Username</h5>
+          <input style="width:100%;"class="form-control" type="text" value="" formControlName="username" required>
+        </div>
+        <div>
+          <h5 class="formLabel">Password</h5>
+          <input style="width: 100%; margin-bottom: 20px;" class="form-control" type="password" value="" formControlName="password" required>
+        </div>
+        <div style="margin:auto;">
+          <button type="submit" class="btn btn-warning" style="width:100%; margin-bottom:20px; font-size:20px">Login</button>
+        </div>
+        <div style="font-size:18px;">
+          <span style="color:white;">Need an account?</span>
+          <a [routerLink]="['/signup']" class="registerButton">Register</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+

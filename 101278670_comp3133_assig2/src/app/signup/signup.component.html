@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+
+<div class="formContainer">
+  <form class="larForms" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="text-center formInlay">
+      <div style="display:flex; width: 100%; flex-direction:column">
+        <h2 class="formTitle">Register</h2>
+      </div>
+      <div style="width:100%; text-align:left; margin-bottom:20px;">
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">First Name</h5>
+          <input style="width:100%;" class="form-control" type="text" formControlName="firstname">
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Last Name</h5>
+          <input style="width:100%;" class="form-control" type="text" formControlName="lastname">
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Email</h5>
+          <input style="width:100%;" class="form-control" type="email" formControlName="email">
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Username</h5>
+          <input style="width:100%;" class="form-control" type="text" formControlName="username">
+        </div>
+        <div>
+          <h5 class="formLabel">Password</h5>
+          <input style="width: 100%; margin-bottom: 20px;" class="form-control" type="password" formControlName="password">
+        </div>
+        <div style="width:100%; margin-bottom:30px;">
+          <h5 class="formLabel">User Type</h5>
+          <select class="form-select" formControlName="type" defaultValue="">
+            <option value="" disabled selected>Please select a type</option>
+            <option value="admin">Admin</option>
+            <option value="customer">Customer</option>
+          </select>
+        </div>
+        <div style="margin:auto;">
+          <button type="submit" class="btn btn-warning" style="width:100%; margin-bottom:20px; font-size:20px">Create Account</button>
+        </div>
+        <div style="font-size:18px;">
+          <span style="color:white;">Already have an account?</span>
+          <a [routerLink]="['/login']" class="loginButton">Login</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

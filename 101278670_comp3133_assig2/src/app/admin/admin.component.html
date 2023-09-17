@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+
+<div class="formContainer">
+  <form class="larForms" [formGroup]="createListingForm" (ngSubmit)="onSubmitCreateListingForm()">
+    <div class="text-center formInlay">
+      <div style="display:flex; width: 100%; flex-direction:column">
+        <h2 class="formTitle">Add a Listing</h2>
+      </div>
+      <div style="width:100%; text-align:left; margin-bottom:20px;">
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Listing ID</h5>
+          <input style="width:100%;" class="form-control" type="text" value="" formControlName="listing_id" required>
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Listing Title</h5>
+          <input style="width:100%;" class="form-control" type="text" value="" formControlName="listing_title"  required>
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Description</h5>
+          <textarea style="width:100%;" class="form-control" formControlName="description" spellcheck="true" rows="1"  required></textarea>
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Street</h5>
+          <input style="width:100%;" class="form-control" type="text" value="" formControlName="street" required>
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">City</h5>
+          <input style="width:100%;" class="form-control" type="text" value="" formControlName="city" required>
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Postal Code</h5>
+          <input style="width:100%;" class="form-control" type="text" value="" formControlName="postal_code" required>
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Price</h5>
+          <input style="width:100%;" class="form-control" type="number" value="" formControlName="price" required>
+        </div>
+        <div style="margin-bottom:20px;">
+          <h5 class="formLabel">Email</h5>
+          <input style="width: 100%; margin-bottom: 30px;" class="form-control" type="email" value="" formControlName="email" required>
+        </div>
+        <div style="margin:auto;">
+          <button type="submit" class="btn btn-warning" style="width:100%; font-size:20px">Add Listing</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
