@@ -6,7 +6,7 @@ The application was made to allow users to book venues for events Both projects 
 The entire program is an estate rental application kind of. The program allows users to create accounts, log in, book venues, and view their bookings. Admin users are allowed to add listings to the program.
 
 ## Technical Details:
-**Front End:** HTML, CSS, JavaScript, Bootstrap, TypeScript, Angular<br/>
+**Front End:** HTML, CSS, Bootstrap, JavaScript, TypeScript, Angular<br/>
 **Back End:**  MongoDB, Node.js, Express.js, Mongoose, GraphQL
 
 
